@@ -1,1 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Constraint-Based Decision Support System | Emily Norris
+    </title>
+
+    <meta name="description"
+          content="A constraint-based decision support system built using MiniZinc to optimize complex decisions under competing constraints.">
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="../index.html">
+                EMILY NORRIS
+            </a>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="https://github.com/emilynorris2025"
+               target="_blank">
+
+                GitHub ↗
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section id="hero">
+
+    <p class="eyebrow">
+
+        PROJECT 01 · DECISION SCIENCE
+
+    </p>
+
+
+    <h1>
+
+        Constraint-Based
+        Decision Support System
+
+    </h1>
+
+
+    <p class="hero-description">
+
+        A scenario-driven optimization model built in MiniZinc
+        to support complex decisions involving capacity constraints,
+        mandatory participants, relationship dynamics, conflicts,
+        and competing priorities.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+        <a href="#problem"
+           class="button primary">
+
+            Explore the Project
+
+        </a>
+
+
+        <a href="https://github.com/emilynorris2025/projects/decision-support-systems"
+           target="_blank"
+           class="button secondary">
+
+            View Code ↗
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section id="problem">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+
+            THE CHALLENGE
+
+        </p>
+
+
+        <h2>
+
+            Complex decisions rarely have
+            one perfect answer.
+
+        </h2>
+
+
+        <p>
+
+            This project explores how constraint programming
+            can support complex decision-making when multiple
+            requirements, competing objectives, and stakeholder
+            relationships must be considered simultaneously.
+
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-group">
+
+            <h3>
+                76
+            </h3>
+
+            <p>
+                Potential participants
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                66
+            </h3>
+
+            <p>
+                Available invitations
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                9
+            </h3>
+
+            <p>
+                Seating tables
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                2
+            </h3>
+
+            <p>
+                Decision scenarios
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DECISION PROBLEM -->
+
+<section id="approach">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+
+            THE DECISION PROBLEM
+
+        </p>
+
+
+        <h2>
+
+            Translate human requirements
+            into mathematical constraints.
+
+        </h2>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-step">
+
+            <span>01</span>
+
+            <h3>
+                Capacity
+            </h3>
+
+            <p>
+
+                Each table has a defined seating capacity,
+                preventing the system from producing
+                physically impossible solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>02</span>
+
+            <h3>
+                Mandatory Rules
+            </h3>
+
+            <p>
+
+                Key participants and family groups must
+                be included regardless of other
+                optimization outcomes.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>03</span>
+
+            <h3>
+                Scenario Selection
+            </h3>
+
+            <p>
+
+                A decision variable allows the model
+                to evaluate alternative event scenarios
+                and adjust downstream constraints.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>04</span>
+
+            <h3>
+                Social Preferences
+            </h3>
+
+            <p>
+
+                Participants from the same group are
+                rewarded when seated together,
+                increasing overall cohesion.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>05</span>
+
+            <h3>
+                Conflict Avoidance
+            </h3>
+
+            <p>
+
+                Known conflicts receive significant
+                penalties when incompatible
+                participants share a table.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>06</span>
+
+            <h3>
+                Optimization
+            </h3>
+
+            <p>
+
+                The solver searches across possible
+                combinations to maximize the overall
+                decision outcome.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- TECHNICAL APPROACH -->
+
+<section id="skills">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+
+            TECHNICAL APPROACH
+
+        </p>
+
+
+        <h2>
+
+            How the optimization model works.
+
+        </h2>
+
+    </div>
+
+
+    <div class="about-content">
+
+
+        <div>
+
+            <h3>
+                Decision Variables
+            </h3>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                Each participant is assigned a decision variable
+                representing their placement at a table or their
+                exclusion from the event.
+
+            </p>
+
+            <p>
+
+                A separate Boolean decision variable controls
+                which high-level scenario the optimization
+                model evaluates.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Hard Constraints
+            </h3>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                Hard constraints enforce requirements that
+                cannot be violated, including table capacity,
+                mandatory participants, reserved seating,
+                and scenario-specific requirements.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Objective Function
+            </h3>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                The model converts qualitative preferences
+                into a measurable optimization objective.
+
+                Positive scores reward social cohesion,
+                while significant penalties discourage
+                incompatible pairings.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CODE -->
+
+<section id="projects">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+
+            CODE HIGHLIGHT
+
+        </p>
+
+
+        <h2>
+
+            Turning decisions into optimization logic.
+
+        </h2>
+
+
+        <p>
+
+            The model separates configuration, data,
+            decision variables, constraints, optimization,
+            and reporting into a structured decision
+            architecture.
+
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <article class="project-card">
+
+            <div class="project-number">
+                01
+            </div>
+
+            <h3>
+                Scenario Variable
+            </h3>
+
+            <p class="project-category">
+                Decision Modeling
+            </p>
+
+            <p>
+
+                A Boolean variable enables alternative
+                scenarios to dynamically change the
+                constraints and decision space.
+
+            </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-number">
+                02
+            </div>
+
+            <h3>
+                Constraint Architecture
+            </h3>
+
+            <p class="project-category">
+                Rules · Capacity · Requirements
+            </p>
+
+            <p>
+
+                The system separates non-negotiable
+                requirements from optimization
+                preferences.
+
+            </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-number">
+                03
+            </div>
+
+            <h3>
+                Scoring Model
+            </h3>
+
+            <p class="project-category">
+                Objective Optimization
+            </p>
+
+            <p>
+
+                Social cohesion and conflict avoidance
+                are translated into a quantitative
+                objective function.
+
+            </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-number">
+                04
+            </div>
+
+            <h3>
+                Automated Solution
+            </h3>
+
+            <p class="project-category">
+                Constraint Solver
+            </p>
+
+            <p>
+
+                The MiniZinc solver evaluates the
+                feasible decision space and identifies
+                the highest-scoring solution.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- KEY ACHIEVEMENTS -->
+
+<section id="about">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+
+            KEY ACHIEVEMENTS
+
+        </p>
+
+
+        <h2>
+
+            What the system demonstrates.
+
+        </h2>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-step">
+
+            <span>01</span>
+
+            <h3>
+                Scenario-Aware Decisions
+            </h3>
+
+            <p>
+
+                Designed the model to dynamically
+                adjust downstream requirements based
+                on alternative high-level decisions.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>02</span>
+
+            <h3>
+                Complex Rule Integration
+            </h3>
+
+            <p>
+
+                Combined physical capacity constraints,
+                mandatory attendance, relationship
+                preferences, and conflict rules into
+                one optimization system.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>03</span>
+
+            <h3>
+                Explainable Optimization
+            </h3>
+
+            <p>
+
+                Built a transparent scoring framework
+                that makes it possible to understand
+                why one solution is preferred over
+                another.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <span>04</span>
+
+            <h3>
+                Automated Reporting
+            </h3>
+
+            <p>
+
+                Structured the model output to report
+                the selected scenario, objective score,
+                conflict penalties, assignments,
+                and excluded participants.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS VALUE -->
+
+<section id="contact">
+
+    <p class="eyebrow">
+
+        WHY IT MATTERS
+
+    </p>
+
+
+    <h2>
+
+        From seating plans to
+        real-world decision systems.
+
+    </h2>
+
+
+    <p>
+
+        While this project uses a fictional event-planning
+        scenario, the same optimization framework can be
+        adapted to workforce scheduling, resource allocation,
+        logistics, portfolio prioritization, supply chain
+        decisions, and other complex problems involving
+        competing constraints.
+
+    </p>
+
+
+    <div class="contact-links">
+
+        <a href="https://github.com/emilynorris2025/projects/decision-support-systems"
+           target="_blank">
+
+            View Full Code ↗
+
+        </a>
+
+
+        <a href="../index.html#projects">
+
+            Back to Projects →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Emily Norris
+    </p>
+
+    <p>
+        AI · Data · Innovation
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
